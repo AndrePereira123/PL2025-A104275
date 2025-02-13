@@ -8,7 +8,7 @@ da Universidade do Minho.
 
 Tarefas semanais:
 <ul>
-  <li>TPC1 - XXX</li>
+  <li>[TPC1 - Somador de digitos](https://github.com/AndrePereira123/PL2025-A104275/tree/main/TPC1)</li>
   <li>TPC2 - XXX</li>
   <li>TPC3 - XXX</li>
   <li>TPC4 - XXX</li>
