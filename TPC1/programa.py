@@ -1,16 +1,4 @@
 
-
-## Somador on/off
-## 1. Somar sequencias de digitos encontradas num texto
-## 2. Off em qualquer formato (Caps ou n) desativa o comportamento
-## 3. On ativa o comportamente
-## 4. Sempre que encontra '=' o resultado é colocado na saida
-
-##dado que as letras "on" aprecem facilmente em texto decidi aceitar a troca
-## apenas quando o on ou o off se encontravam entre characteres de espaco " "
-## ou , por exemplo, no inicio do texto onde nao ha char a esquerda e ha um epaco
-## a esquerda  "OfF O senhor de 79 anos ..."
-
 verde = "\033[32m"
 vermelho = "\033[31m"
 amarelo = "\033[33m"
@@ -54,9 +42,9 @@ def somador(f):
                  if (On_off(switch,estado)):
                      estado = not estado
                      if (estado):
-                         print(f"{verde}Soma ativa{reset}",end = "\n") 
+                         print(f"{verde}Soma ativada{reset}",end = "\n") 
                      else: 
-                         print(f"{vermelho}Soma inativa{reset}",end = "\n")
+                         print(f"{vermelho}Soma desativada{reset}",end = "\n")
              if not char:
                  return
 
@@ -71,8 +59,19 @@ def intrepretador_digitos(digitos):
     return 0
 
 def main():
-    print("\nOs ficheiros de texto vao ser lidos\n")
-    f = open("PL2025-A104275/TPC1/texto_teste_1.txt", "r")
+    print("\nInsira o nome do ficheiro de texto a ler: (default = texto1.txt)\n")
+    nome_ficheiro = input()
+    if (len(nome_ficheiro) == 0):
+        f = open("texto1.txt", "r")
+    else:
+        try:
+            f = open(nome_ficheiro,"r")
+        except FileNotFoundError:
+            print(f"O ficheiro não foi encontrado")
+            return
+        except Exception as e:
+            print(f"Erro inesperado: {e}")
+            return
     somador(f)
 
     
