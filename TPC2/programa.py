@@ -2,6 +2,8 @@
 import re
 import bisect
 
+Padrao_Regex = '^.*?;.*?;\d{4};.*?;.*?;\d\d:\d\d:\d\d;\d*'
+
 def guardar_informacao(instancia_em_texto,Lista_Compositores,N_Obras_por_periodo,Obras_por_periodo):
     
     ##Descricao_obra = re.search(r'^.*?;(.*?);\d{4};.*?;.*?;\d\d:\d\d:\d\d;\d*',instancia_em_texto,re.DOTALL).group(1)
@@ -29,15 +31,12 @@ def main():
     Obras_por_periodo = {}
     ##procurar 6 instancias de ; antes de fazer split - dado q existe sempre um \n entre instancias podemos faze lo
     instancia_em_texto = ""
-    numero_de_pontos_virgula = 0
     next(f) ##ignorar primeira linha
     for linha in f:
         instancia_em_texto += linha
-        numero_de_pontos_virgula += linha.count(";")
-        if (numero_de_pontos_virgula >= 6):
+        if (re.match(Padrao_Regex,instancia_em_texto,re.DOTALL)):
             guardar_informacao(instancia_em_texto,Lista_Compositores,N_Obras_por_periodo,Obras_por_periodo)
             instancia_em_texto = ""
-            numero_de_pontos_virgula = 0
     print("Processamento completo!\n")
 
     continuar = True
@@ -61,8 +60,11 @@ def main():
             for compositor in Lista_Compositores:
                 print(compositor)
         elif i == 2:
+            total = 0
             for (periodo,n_obras) in N_Obras_por_periodo.items():
                 print(f"Período: {periodo.ljust(15)} || NºObras: {n_obras}")
+                total += n_obras
+            print(f"\nNúmero total de obras: {total}")
         elif i == 3:
             for (periodo,obras) in Obras_por_periodo.items():
                 print("\n--------------------------")
