@@ -1,8 +1,6 @@
-# PL2025-A104275
-# TPC-1
-## André Filipe Soares Pereira || A104275
+# PL2025-A104275 || André Filipe Soares Pereira || A104275
+# TPC-1: Somador on/off
 
-### Problema proposto (Somador on/off) 
   Para o primeiro trabalho semanal foi proposta a realização de um acumulador de dígitos. Este "somador" deve:
    1. Somar sequências de dígitos encontradas num texto
    2. A string "Off" em qualquer combinação de caracteres maiúsculos ou minúsculos deve desativar o comportamento e a string "On" deve realizar o oposto
