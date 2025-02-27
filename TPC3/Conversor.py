@@ -25,8 +25,8 @@ def main():
         lista_html = ""
         for linha in lista.split("\n"):
             if len(linha) > 3:
-                lista_html += ("<li>" + linha[3:] + "</li>")
-        listas_em_html.append("<ol>" + lista_html + "</ol>")
+                lista_html += ("<li>" + linha[3:] + "</li>\n")
+        listas_em_html.append("<ol>\n" + lista_html + "</ol>\n")
 
     for original in listas:
         html = html.replace(original, listas_em_html.pop())
