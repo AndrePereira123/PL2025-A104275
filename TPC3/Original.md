@@ -1,5 +1,10 @@
 # PL2025-A104275 || André Filipe Soares Pereira || A104275
 # TPC-3: Conversor MarkDown para HTML
+## Dois 
+### Tres
+#### Quatro
+##### Cinco
+###### Seis
 
 Texto com teste de **bold** com *italico* e tudo mais para ver se *funciona* com as **novas** coisa que foram de *facto* **implementadas**
 

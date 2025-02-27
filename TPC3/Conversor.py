@@ -9,7 +9,7 @@ def main():
     pagHTML = "<!DOCTYPE html>  <html> <head> <style> body { background-color: #121212; color: #ffffff; text-align:center;font-size:2rem;} </style> </head>"
 
 
-    html = re.sub(r"#(\s+.+)",r"<h1>\1</h1>",html)
+    html = re.sub(r"^(#+)(\s+.+)", lambda m: f"<h{len(m.group(1))}>{m.group(2).strip()}</h{len(m.group(1))}>", html, flags=re.M)
     html = re.sub(r"\*\*(.+?)\*\*",r"<b>\1</b>",html)
     html = re.sub(r"\*(.+?)\*",r"<i>\1</i>",html)
     
