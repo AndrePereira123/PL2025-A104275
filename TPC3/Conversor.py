@@ -17,7 +17,6 @@ def main():
     
     ##html = re.sub(r"(\d+)\.\s(.+)(\d+)\.\s([^\n]+)", r"<ol><li>\2</li></ol>", html ,flags=re.DOTALL)
 
-
     # Step 1: Extract matches
     listas = re.findall(padrao_listas,html,flags=re.DOTALL)
 
@@ -26,14 +25,16 @@ def main():
         lista_html = ""
         for linha in lista.split("\n"):
             if len(linha) > 3:
-                print(linha)
                 lista_html += ("<li>" + linha[3:] + "</li>")
         listas_em_html.append("<ol>" + lista_html + "</ol>")
-
 
     for original in listas:
         html = html.replace(original, listas_em_html.pop())
 
+    html = re.sub(r"\!\[(.+?)\]\((.+?)\)(\n?)" ,r'<img src="\2" alt="\1" width="100"/>\3\3',html)
+    html = re.sub(r"\[(.+?)\]\((.+?)\)(\n?)",r'<a href="\2">\1</a>\3\3',html)
+
+    html = re.sub(r"#(\s+.+)",r"<h1>\1</h1>",html)
 
     pagHTML += html
 

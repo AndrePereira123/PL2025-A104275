@@ -12,6 +12,17 @@ Texto com teste de **bold** com *italico* e tudo mais para ver se *funciona* com
 2. Segundo item
 3. Terceiro item
 
+
+Como se vê na imagem seguinte: ![imagem dum... coelho?](https://c4.wallpaperflare.com/wallpaper/409/952/920/dragon-ball-z-son-goku-portrait-display-wallpaper-preview.jpg)
+
+Como pode ser consultado em [página da UC](http://www.uc.pt)
+Como pode ser consultado em [página da UC](http://www.uc.pt)
+Como pode ser consultado em [página da UC](http://www.uc.pt)
+Como pode ser consultado em [link de teste](http://www.google.pt)
+
+
+Como se vê na imagem seguinte: ![imagem dum... coelho?](https://c4.wallpaperflare.com/wallpaper/409/952/920/dragon-ball-z-son-goku-portrait-display-wallpaper-preview.jpg)
+
 Texto com teste de **bold** com *italico* e tudo mais para ver se *funciona* com as **novas** coisa que foram de *facto* **implementadas**
 
 1. prim item
