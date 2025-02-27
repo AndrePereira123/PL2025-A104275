@@ -18,7 +18,7 @@ Texto com teste de **bold** com *italico* e tudo mais para ver se *funciona* com
 3. Terceiro item
 
 
-Como se vê na imagem seguinte: ![imagem dum... coelho?]([https://github.com/AndrePereira123/PL2025-A104275/blob/main/TPC3/imagem.jpg?raw=true](https://github.com/AndrePereira123/PL2025-A104275/blob/main/TPC3/imagem.jpg))
+Como se vê na imagem seguinte: ![imagem dum... coelho?]([https://i.namu.wiki/i/sbjPxWYUA9iOAt_3LWCkvT8F3yGl5Jl1JDvr1gPfWbmY4ANLW-O9zempEd0HT_bf4302FOrcS2Yri_CnLgfUbg.webp](https://github.com/AndrePereira123/PL2025-A104275/blob/main/TPC3/imagem.jpg))
 
 Como pode ser consultado em [página da UC](http://www.uc.pt)
 Como pode ser consultado em [página da UC](http://www.uc.pt)
@@ -26,7 +26,7 @@ Como pode ser consultado em [página da UC](http://www.uc.pt)
 Como pode ser consultado em [link de teste](http://www.google.pt)
 
 
-Como se vê na imagem seguinte: ![imagem dum... coelho?]([https://c4.wallpaperflare.com/wallpaper/409/952/920/dragon-ball-z-son-goku-portrait-display-wallpaper-preview.jpg](https://github.com/AndrePereira123/PL2025-A104275/blob/main/TPC3/imagem.jpg?raw=true))
+Como se vê na imagem seguinte: ![imagem dum... coelho?]([https://i.namu.wiki/i/sbjPxWYUA9iOAt_3LWCkvT8F3yGl5Jl1JDvr1gPfWbmY4ANLW-O9zempEd0HT_bf4302FOrcS2Yri_CnLgfUbg.webp](https://github.com/AndrePereira123/PL2025-A104275/blob/main/TPC3/imagem.jpg?raw=true))
 
 Texto com teste de **bold** com *italico* e tudo mais para ver se *funciona* com as **novas** coisa que foram de *facto* **implementadas**
 
