@@ -1,5 +1,5 @@
-import sys
-import re
+
+
 import ply.lex as lex
 
 tokens = (
