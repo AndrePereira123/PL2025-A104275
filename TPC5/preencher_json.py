@@ -1,0 +1,33 @@
+import json
+
+
+stock = [
+    {"cod": "A01", "nome": "Água 0.5L", "quant": 10, "preco": 0.7},
+    {"cod": "A02", "nome": "Coca-Cola 33cl", "quant": 8, "preco": 1.2},
+    {"cod": "A03", "nome": "Pepsi 33cl", "quant": 6, "preco": 1.2},
+    {"cod": "A04", "nome": "Sumo Laranja 33cl", "quant": 5, "preco": 1.3},
+    {"cod": "A05", "nome": "Red Bull", "quant": 4, "preco": 2.0},
+    
+    {"cod": "B01", "nome": "Batatas Fritas", "quant": 7, "preco": 1.5},
+    {"cod": "B02", "nome": "Amendoins Torrados", "quant": 6, "preco": 1.3},
+    {"cod": "B03", "nome": "Mix de Frutos Secos", "quant": 5, "preco": 1.8},
+    {"cod": "B04", "nome": "Bolacha Chocolate", "quant": 9, "preco": 1.6},
+    {"cod": "B05", "nome": "Snickers", "quant": 8, "preco": 1.4},
+    {"cod": "B06", "nome": "Twix", "quant": 7, "preco": 1.4},
+    {"cod": "B07", "nome": "KitKat", "quant": 6, "preco": 1.3},
+
+    {"cod": "C01", "nome": "Pastilha Mentol", "quant": 12, "preco": 0.8},
+    {"cod": "C02", "nome": "Pastilha de Morango", "quant": 10, "preco": 0.8},
+    
+    {"cod": "D01", "nome": "Café Expresso", "quant": 15, "preco": 0.9},
+    {"cod": "D02", "nome": "Cappuccino", "quant": 10, "preco": 1.5},
+    {"cod": "D03", "nome": "Chocolate Quente", "quant": 8, "preco": 1.6},
+    {"cod": "D04", "nome": "Chá Verde", "quant": 5, "preco": 1.2}
+]
+
+
+
+with open("stock.json", "w", encoding="utf-8") as f:
+    json.dump(stock, f, ensure_ascii=False, indent=4)
+
+print("Arquivo 'stock.json' criado com sucesso!")
