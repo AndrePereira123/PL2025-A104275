@@ -1,7 +1,6 @@
 
 import json,re
 from datetime import date
-from decimal import Decimal
 
 def amarelo():
     print("\033[33m",end="")  # ANSI code for yellow text
@@ -192,7 +191,7 @@ while res != "SAIR":
 
             with open("stock.json", "w", encoding="utf-8") as s:
                 json.dump(produtos, s, ensure_ascii=False, indent=4)
-            print("\nAté à próxima")
+            print("\nAté à próxima.")
             reset()
                 
 
