@@ -12,6 +12,7 @@ Usufrui de um [ficheiro JSON](https://github.com/AndrePereira123/PL2025-A104275/
  - Inserir *moedas*
  - *Selecionar* produtos
  - Forma de "*sair*" do programa
+
 Com estas funcionalidades foi necessária a implementação de uma lógica de saldo atual e função de impressão dessa quantidade num formato "XeYc" onde "e" simboliza os euros e "c" os céntimos. Foi necessário um calculo do troco e funcionalidade de impressão identica ao output sugerido.
 Para além das funções obrigatórias implementei a opção de *repor* o stock de um produto; com está e algumas das funções mencionadas foram levados em consideração diversos cenários de prevensão e aviso de erro como:
  - Comando "*AJUDA*" que descreve todos os outros
