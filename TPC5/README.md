@@ -14,6 +14,7 @@ Usufrui de um [ficheiro JSON](https://github.com/AndrePereira123/PL2025-A104275/
  - Forma de "*sair*" do programa
 
 Com estas funcionalidades foi necessária a implementação de uma lógica de saldo atual e função de impressão dessa quantidade num formato "XeYc" onde "e" simboliza os euros e "c" os céntimos. Foi necessário um calculo do troco e funcionalidade de impressão identica ao output sugerido.
+
 Para além das funções obrigatórias implementei a opção de *repor* o stock de um produto; com está e algumas das funções mencionadas foram levados em consideração diversos cenários de prevensão e aviso de erro como:
  - Comando "*AJUDA*" que descreve todos os outros
  - Verificação de código de produto ao selecionar ou repor
@@ -24,7 +25,7 @@ O JSON é atualizado apenas se o utilizador utilizar o comando "SAIR" para termi
 
 Usufrui de 3 livrarias de python:
  - [json](https://docs.python.org/3/library/json.html#module-json) para ler e escrever no ficheiro auxiliar
- - [re](https://docs.python.org/3/library/re.html#module-re) para facilitar a identificação das moedas inseridas com uma expressão regular e com a função "finditer" => "moedas = re.finditer(r"(2e|1e|50c|20c|10c|5c)(?:,|\s)*", res[5:])"
+ - [re](https://docs.python.org/3/library/re.html#module-re) para facilitar a identificação das moedas inseridas com uma expressão regular e com a função "finditer" => ```moedas = re.finditer(r"(2e|1e|50c|20c|10c|5c)(?:,|\s)*", res[5:])```
  - [datetime](https://docs.python.org/3/library/datetime.html) para implementar a impressão da data atual como sugerido no exemplo do [enunciado](https://github.com/AndrePereira123/PL2025-A104275/blob/main/TPC5/Enunciado.pdf)
 from datetime import date
 
