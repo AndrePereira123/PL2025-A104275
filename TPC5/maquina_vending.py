@@ -95,26 +95,31 @@ while res != "SAIR":
             vermelho()
             print(f"Produto com código {codigo_produto} não existe. Códigos válidos: {codigos}")
         else:
-            custo = int(float(produto_pedido["preco"])*100)
-            if  custo > saldo:
+            if (produto_pedido["quant"]) == 0:   
                 vermelho()
-                print(f"Saldo insuficiente para satisfazer o pedido\nSaldo = ",end = "")
-                print_dinheiro(saldo)
-                print(f"Pedido = ")
-                print_dinheiro(custo)
+                print(f"\"{produto_pedido["nome"]}\" está indisponível (sem stock).")
             else:
-                saldo -= custo
-                vermelho()
-                print("-",end = "")
-                print_dinheiro(custo)
-                azul()
-                print(f"Pode retirar o produto dispensado \"{produto_pedido["nome"]}\"")
-                print(f"Saldo = ",end = "")
-                print_dinheiro(saldo)
+                custo = int(float(produto_pedido["preco"])*100)
+                if  custo > saldo:
+                    vermelho()
+                    print(f"Saldo insuficiente para satisfazer o pedido\nSaldo = ",end = "")
+                    print_dinheiro(saldo)
+                    print(f"Pedido = ",end = "")
+                    print_dinheiro(custo)
+                else:
+                    saldo -= custo
+                    produto_pedido["quant"] -= 1
+                    vermelho()
+                    print("-",end = "")
+                    print_dinheiro(custo)
+                    print(f"Stock atualizado ({produto_pedido["quant"]})")
+                    azul()
+                    print(f"Pode retirar o produto dispensado \"{produto_pedido["nome"]}\"")
+                    print(f"Saldo = ",end = "")
+                    print_dinheiro(saldo)
 
     elif res[:4] == "SAIR":
             azul()
-            print("\nPode retirar o troco: " , end = "")
             lista_moedas = [200,100,50,20,10,5]
             num_moedas = {}
             for x in lista_moedas:
@@ -123,20 +128,27 @@ while res != "SAIR":
                     else: num_moedas[x] += 1 
                     saldo -= x
 
-            items = list(num_moedas.items())  
-            for i, (k, v) in enumerate(items):
-                str_inicio = ""
-                str_final = ", "
-                if i == len(items) - 2 : str_final = ""
-                if i == len(items) - 1 :
-                    str_final = "."
-                    if len(items) > 1 : str_inicio = " e "
+            items = list(num_moedas.items()) 
+            if (items): 
+                print("\nPode retirar o troco: " , end = "")
+                for i, (k, v) in enumerate(items):
+                    str_inicio = ""
+                    str_final = ", "
+                    if i == len(items) - 2 : str_final = ""
+                    if i == len(items) - 1 :
+                        str_final = "."
+                        if len(items) > 1 : str_inicio = " e "
 
-                if v > 0:
-                    if int(k) >= 100:
-                        print(f"{str_inicio}{v}x {int(k/100)}e" , end = str_final)
-                    else:
-                        print(f"{str_inicio}{v}x {k}c",end = str_final)
+                    if v > 0:
+                        if int(k) >= 100:
+                            print(f"{str_inicio}{v}x {int(k/100)}e" , end = str_final)
+                        else:
+                            print(f"{str_inicio}{v}x {k}c",end = str_final)
+            verde()
+
+            with open("stock.json", "w", encoding="utf-8") as s:
+                json.dump(produtos, s, ensure_ascii=False, indent=4)
+            print("\nAté à próxima")
             reset()
                 
 
