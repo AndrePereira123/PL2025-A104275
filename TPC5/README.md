@@ -9,20 +9,20 @@ Neste TPC "Pediram-te para construir um programa que simule uma máquina de vend
 ## Descrição do programa
 
 Usufrui de um [ficheiro JSON](https://github.com/AndrePereira123/PL2025-A104275/blob/main/TPC5/stock.json) , como sugerido, para ler e guardar os dados dos produtos da máquina. Para preencher o json criei um [script em python](https://github.com/AndrePereira123/PL2025-A104275/blob/main/TPC5/preencher_json.py) que permite restaurar o estado inicial da máquina. Foram implementadas todas as funções requisitadas: 
- - *Listar* produtos
- - Inserir *moedas*
- - *Selecionar* produtos
- - Forma de "*sair*" do programa
+ - **Listar** produtos
+ - Inserir **moedas**
+ - **Selecionar** produtos
+ - Forma de "**sair**" do programa
 
-Com estas funcionalidades foi necessária a implementação de uma lógica de saldo atual e função de impressão dessa quantidade num formato "XeYc" onde "e" simboliza os euros e "c" os céntimos. Foi necessário um calculo do troco e funcionalidade de impressão identica ao output sugerido.
+Com estas funcionalidades foi necessária a implementação de uma lógica de saldo atual e função de impressão dessa quantidade num formato "**XeYc**" onde "e" simboliza os euros e "c" os céntimos. Foi necessário um calculo do troco e funcionalidade de impressão identica ao output sugerido.
 
 Para além das funções obrigatórias implementei a opção de *repor* o stock de um produto; com está e algumas das funções mencionadas foram levados em consideração diversos cenários de prevensão e aviso de erro como:
- - Comando "*AJUDA*" que descreve todos os outros
+ - Comando "**AJUDA**" que descreve todos os outros
  - Verificação de código de produto ao selecionar ou repor
  - Verificação de stock de produto ao selecionar(minimo de 1) ou repor(limite max. de 20)
  - Aviso de saldo insuficiente ao selecionar produto
 
-O JSON é atualizado apenas se o utilizador utilizar o comando "SAIR" para terminar o programa da forma pretendida, nesse momento os dados em memória são registados atravez de um "json.dump" no ficheiro [stock.json](https://github.com/AndrePereira123/PL2025-A104275/blob/main/TPC5/stock.json).
+O JSON é atualizado apenas se o utilizador utilizar o comando "**SAIR**" para terminar o programa da forma pretendida, nesse momento os dados em memória são registados atravez de um ```json.dump()``` no ficheiro [stock.json](https://github.com/AndrePereira123/PL2025-A104275/blob/main/TPC5/stock.json).
 
 Usufrui de 3 livrarias de python:
  - [json](https://docs.python.org/3/library/json.html#module-json) para ler e escrever no ficheiro auxiliar
