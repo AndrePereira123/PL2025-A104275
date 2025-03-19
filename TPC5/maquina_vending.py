@@ -51,8 +51,52 @@ while res != "SAIR":
         print("LISTAR- Lista produtos disponiveis com codigo quantidade e preco")
         print("MOEDA- Este comando seguindo de \"2e\" \"1e\" \"50c\" \"20c\" \"10c\" ou \"5c\", separados por virgulas e ponto no final, permite introduzir moedas na maquina")
         print("SELECIONAR- Este comando seguido de um codigo de produto permite comprá-lo, se o saldo for suficiente")
+        print("REPOR- Permite repor o stock de um produto")
         print("SAIR- Terminar o programa e receber troco")
-    
+    elif res[:5] == "REPOR":
+        codigo = None
+        while (codigo == None):
+            azul()
+            print("Código do produto a repor: >", end = "")
+            codigos = []
+            produto_pedido = None
+            reset()
+            codigo_produto = input()
+            azul()
+            for produto in produtos:
+                codigos.append(produto["cod"])
+                if produto["cod"] == codigo_produto:
+                    produto_pedido = produto
+                    codigo = produto_pedido["cod"]
+
+            if codigo == None:
+                vermelho()
+                print(f"Produto com código {codigo_produto} não existe. Códigos válidos: {codigos}")
+            elif produto_pedido["quant"] == 20:
+                vermelho()
+                print(f"\"{produto_pedido["nome"]}\" já se encontra com o stock máximo de 20.")
+                codigo = None
+            else: 
+                quantidade = None
+                while quantidade == None:
+                    verde()
+                    print(f"\"{produto_pedido["nome"]}\" selecionado. Stock atual = {produto_pedido["quant"]}")
+                    azul()
+                    print("Qual o número de unidade a inserir? >", end = "")
+                    reset()
+                    i = int(input())
+                    azul()
+                    if i in range(1,21 - int(produto_pedido["quant"])):
+                        quantidade = i
+                        produto_pedido["quant"] += quantidade
+                        verde()
+                        print(f"{i} unidade de \"{produto_pedido["nome"]}\" foram inseridas. Stock atual = {produto_pedido["quant"]}.")
+                    else: 
+                        vermelho()
+                        print(f"O valor {i} é inválido, o limite de stock é 20.(20 < {int(produto_pedido["quant"])} + {i})")
+                        
+            
+
     elif res == "LISTAR":
         amarelo()
         print(f"{'cod':^10} | {'nome':^20} | {'quantidade':^10} | {'preco':^6}")
