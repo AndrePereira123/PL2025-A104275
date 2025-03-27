@@ -12,7 +12,7 @@ Tarefas semanais:
 - [TPC3 - Conversor de markdown para html](https://github.com/AndrePereira123/PL2025-A104275/tree/main/TPC3)
 - [TPC4 - Analisador Léxico Simples](https://github.com/AndrePereira123/PL2025-A104275/tree/main/TPC4)
 - [TPC5 - Máquina de Vending](https://github.com/AndrePereira123/PL2025-A104275/tree/main/TPC5)
-- [TPC6 - XXX](https://github.com/AndrePereira123/PL2025-A104275/tree/main/TPC6)
+- [TPC6 - Parser LL(1)](https://github.com/AndrePereira123/PL2025-A104275/tree/main/TPC6)
 - [TPC7 - XXX](https://github.com/AndrePereira123/PL2025-A104275/tree/main/TPC7)
 - [TPC8 - XXX](https://github.com/AndrePereira123/PL2025-A104275/tree/main/TPC8)
 
