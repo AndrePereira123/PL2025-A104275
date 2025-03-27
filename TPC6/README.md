@@ -7,7 +7,19 @@ Neste TPC pediram nos para desenvolver um parser LL(1).
 ## Descrição do programa
 
 Para facilitar a compreesao e evitar redundancia reconhecer um "Fator" como "Num" acontece com 1 linha de print so.
-- Gramatica desenvolvida
+- Gramática desenvolvida:
+  ```
+  Exp  ---> Termo Exp2    (p0)
+  Exp2 ---> "+" Exp       (p1)
+           |"-" Exp       (p2)
+           | Epsilon      (p3)
+  
+  Termo  ---> Dator Termo2 (p4)
+  Termo2 ---> "*" Termo    (p5)
+            | Epsilon      (p6)
+  Fator ---> Num           (p7)
+            | "(" Exp ")"  (p8)
+  ```
 - Prints baseados nas aulas
 
 
