@@ -12,6 +12,7 @@ Para facilitar a compreesao e evitar redundancia reconhecer um "Fator" como "Num
 
 
 ## Exemplo de utilização
+Os prints foram simplificados (omitidos muitos deles) para facilitar a compreensão do processo.
 ```
 Introduza uma expressão: (9-2)*(13-4)
 Reconheci P7: Fator --> Num  9
