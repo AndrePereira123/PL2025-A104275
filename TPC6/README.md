@@ -29,7 +29,9 @@ Exemplos de algumas frases:
 Comecei por alterar o analisador léxico desenvolvido nas aulas para que suportasse a linguagem pretendida no ficheiro ["analisador_lexico.py"](https://github.com/AndrePereira123/PL2025-A104275/blob/main/TPC6/analisador_lexico.py).
 
 Para o [parser](https://github.com/AndrePereira123/PL2025-A104275/blob/main/TPC6/parser%20LL(1).py) em si bastou-me criar 3 funções "rec" que "reconhecem" uma Expressão(Exp), Termo ou Fator e seguem as regras da gramática definida de forma a percorrer e interpretar as operações. O valor de resultado é mantido numa variável "valor" incrementada recursivamente à medida que são chamadas as funções, por exemplo, numa expressão (chamadas recursivas que não alteram o cálculo foram ignoradas): 
-```(2+3)```
+ 
+ ```(2+3)```
+ 
  - Primeiro a função "rec_FATOR()" identifica o parêntese esquerdo e declara o valor como "= rec_expressao()"
  - De forma recursiva a "rec_FATOR()" volta a executar e, desta vez, encontra o valor "2" que é retornado
  - A "rec_expressao()" admite que o próximo token é "+" reconhece-o e soma ao valor(2) o valor do termo seguinte
