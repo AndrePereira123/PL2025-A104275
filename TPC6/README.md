@@ -12,7 +12,7 @@ Exemplos de algumas frases:
 
 ## Descrição do programa
 
-- Gramática desenvolvida(baseada nas aulas teóricas):
+Gramática desenvolvida(baseada nas aulas teóricas):
   ```
   Exp    --- Termo Exp2     (p0)
   Exp2   --- "+" Exp        (p1)
