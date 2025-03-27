@@ -13,38 +13,19 @@ Para facilitar a compreesao e evitar redundancia reconhecer um "Fator" como "Num
 
 ## Exemplo de utilização
 ```
-Introduza uma expressão: ((1+3)*(2)*(4)*(9-3)-(432))
-Derivando por P4: Fator --> '(' Exp ')'
-Derivando por P4: Fator --> '(' Exp ')'
-Reconheci P4: Fator --> Num
-Derivando por P1: Exp --> Termo + Termo
-Reconheci P4: Fator --> Num
-Reconheci P1: Exp --> Termo + Termo
-Reconheci P4: Fator --> '(' Exp ')'
-Derivando por P3: Termo --> Fator * Fator
-Derivando por P4: Fator --> '(' Exp ')'
-Reconheci P4: Fator --> Num
-Reconheci P4: Fator --> '(' Exp ')'
-Reconheci P3: Termo --> Fator * Fator
-Derivando por P3: Termo --> Fator * Fator
-Derivando por P4: Fator --> '(' Exp ')'
-Reconheci P4: Fator --> Num
-Reconheci P4: Fator --> '(' Exp ')'
-Reconheci P3: Termo --> Fator * Fator
-Derivando por P3: Termo --> Fator * Fator
-Derivando por P4: Fator --> '(' Exp ')'
-Reconheci P4: Fator --> Num
-Derivando por P2: Exp --> Termo - Termo
-Reconheci P4: Fator --> Num
-Reconheci P2: Exp --> Termo - Termo
-Reconheci P4: Fator --> '(' Exp ')'
-Reconheci P3: Termo --> Fator * Fator
-Derivando por P2: Exp --> Termo - Termo
-Derivando por P4: Fator --> '(' Exp ')'
-Reconheci P4: Fator --> Num
-Reconheci P4: Fator --> '(' Exp ')'
-Reconheci P2: Exp --> Termo - Termo
-Reconheci P4: Fator --> '(' Exp ')'
-Resultado da Expressão: -240
+Introduza uma expressão: (9-2)*(13-4)
+Reconheci P7: Fator --> Num  9
+Reconheci P7: Fator --> Num  2
+Reconheci P2: Exp2 --> '-' Exp
+Reconheci P0: Exp --> Termo Exp2
+Reconheci P8: Fator --> '(' Exp ')'
+Reconheci P7: Fator --> Num  13
+Reconheci P7: Fator --> Num  4
+Reconheci P2: Exp2 --> '-' Exp
+Reconheci P0: Exp --> Termo Exp2
+Reconheci P8: Fator --> '(' Exp ')'
+Reconheci P5: Termo2 --> * Termo
+Reconheci P0: Exp --> Termo Exp2
+Resultado da Expressão: 63
 ```
 
