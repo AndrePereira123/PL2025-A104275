@@ -7,6 +7,9 @@ Neste TPC pediram nos para desenvolver um parser LL(1).
 ## Descrição do programa
 
 Para facilitar a compreesao e evitar redundancia reconhecer um "Fator" como "Num" acontece com 1 linha de print so.
+- Gramatica desenvolvida
+- Prints baseados nas aulas
+
 
 ## Exemplo de utilização
 ```
