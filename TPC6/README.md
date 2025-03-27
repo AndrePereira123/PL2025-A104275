@@ -1,12 +1,17 @@
 # PL2025-A104275 || André Filipe Soares Pereira || A104275
 # TPC-6: Parser LL(1)
 
-Neste TPC pediram nos para desenvolver um parser LL(1).
+"Baseado nos materiais fornecidos na aula, cria um parser LL(1) recursivo descendente que reconheça expressões aritméticas e calcule o respetivo valor.
 
+Exemplos de algumas frases:
+```
+2+3
+67-(2+3*4)
+(9-2)*(13-4)"
+```
 
 ## Descrição do programa
 
-Para facilitar a compreesao e evitar redundancia reconhecer um "Fator" como "Num" acontece com 1 linha de print so.
 - Gramática desenvolvida:
   ```
   Exp    ---> Termo Exp2     (p0)
